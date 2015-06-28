@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DataBinding</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reset">Reset</string>
+    <string name="login">Login</string>
+    <string name="email_title">What is your e-mail address?</string>
+    <string name="password_title">Do you have a password?</string>
+    <string name="new_customer">No, I am a new customer.</string>
+    <string name="i_have_a_password">Yes, I have a password:</string>
+    <string name="mandatory_field">Mandatory field</string>
+    <string name="invalid_email">Please provide a valid email address</string>
+</resources>
