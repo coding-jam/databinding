@@ -2,8 +2,6 @@ package it.cosenonjaviste.databinding.util;
 
 import android.databinding.BindingAdapter;
 import android.databinding.BindingConversion;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -21,29 +19,13 @@ public class Converters {
         return bindableBoolean.get();
     }
 
-    @BindingConversion
-    public static TextWatcher convertBindableToTextWatcher(final BindableString bindableString) {
-        return new TextWatcherAdapter() {
-            @Override public void afterTextChanged(Editable s) {
-                bindableString.set(s.toString());
-            }
-        };
-    }
-
     @BindingAdapter({"app:binding"})
     public static void bindEditText(EditText view, final BindableString bindableString) {
         if (view.getTag(R.id.binded) == null) {
             view.setTag(R.id.binded, true);
-            view.addTextChangedListener(new TextWatcher() {
-                @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                }
-
+            view.addTextChangedListener(new TextWatcherAdapter() {
                 @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bindableString.set(s.toString());
-                }
-
-                @Override public void afterTextChanged(Editable s) {
                 }
             });
         }
