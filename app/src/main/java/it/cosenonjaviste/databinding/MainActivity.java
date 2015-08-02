@@ -39,11 +39,6 @@ public class MainActivity extends AppCompatActivity {
         binding.email.addTextChangedListener(watcher);
         binding.password.addTextChangedListener(watcher);
 
-        binding.reset.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                loginInfo.reset();
-            }
-        });
         binding.login.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 loginInfo.loginExecuted = true;

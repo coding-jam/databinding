@@ -2,6 +2,7 @@ package it.cosenonjaviste.databinding.util;
 
 import android.databinding.BindingAdapter;
 import android.databinding.BindingConversion;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -47,5 +48,14 @@ public class Converters {
         }
         Boolean newValue = bindableBoolean.get();
         ((RadioButton) view.getChildAt(newValue ? 1 : 0)).setChecked(true);
+    }
+
+    @BindingAdapter({"app:onClick"})
+    public static void bindOnClick(View view, final Runnable runnable) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                runnable.run();
+            }
+        });
     }
 }
