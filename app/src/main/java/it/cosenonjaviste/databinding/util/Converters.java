@@ -22,8 +22,8 @@ public class Converters {
 
     @BindingAdapter({"app:binding"})
     public static void bindEditText(EditText view, final BindableString bindableString) {
-        if (view.getTag(R.id.binded) == null) {
-            view.setTag(R.id.binded, true);
+        if (view.getTag(R.id.binded) != bindableString) {
+            view.setTag(R.id.binded, bindableString);
             view.addTextChangedListener(new TextWatcherAdapter() {
                 @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bindableString.set(s.toString());
@@ -38,8 +38,8 @@ public class Converters {
 
     @BindingAdapter({"app:binding"})
     public static void bindRadioGroup(RadioGroup view, final BindableBoolean bindableBoolean) {
-        if (view.getTag(R.id.binded) == null) {
-            view.setTag(R.id.binded, true);
+        if (view.getTag(R.id.binded) != bindableBoolean) {
+            view.setTag(R.id.binded, bindableBoolean);
             view.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override public void onCheckedChanged(RadioGroup group, int checkedId) {
                     bindableBoolean.set(checkedId == group.getChildAt(1).getId());
