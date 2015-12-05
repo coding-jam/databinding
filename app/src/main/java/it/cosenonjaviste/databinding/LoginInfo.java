@@ -5,17 +5,17 @@ import android.util.Patterns;
 
 import org.parceler.Parcel;
 
-import it.cosenonjaviste.databinding.util.BindableBoolean;
-import it.cosenonjaviste.databinding.util.BindableString;
+import it.cosenonjaviste.twowaydatabinding.ObservableBoolean;
+import it.cosenonjaviste.twowaydatabinding.ObservableString;
 
 @Parcel
 public class LoginInfo {
-    public BindableString email = new BindableString();
-    public BindableString password = new BindableString();
-    public BindableString emailError = new BindableString();
-    public BindableString passwordError = new BindableString();
+    public ObservableString email = new ObservableString();
+    public ObservableString password = new ObservableString();
+    public ObservableString emailError = new ObservableString();
+    public ObservableString passwordError = new ObservableString();
 
-    public BindableBoolean existingUser = new BindableBoolean();
+    public ObservableBoolean existingUser = new ObservableBoolean();
 
     public boolean loginExecuted;
 

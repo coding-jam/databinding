@@ -10,7 +10,7 @@ import android.view.View;
 import org.parceler.Parcels;
 
 import it.cosenonjaviste.databinding.databinding.ActivityMainBinding;
-import it.cosenonjaviste.databinding.util.TextWatcherAdapter;
+import it.cosenonjaviste.twowaydatabinding.TextWatcherAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
