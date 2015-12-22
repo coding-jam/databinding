@@ -38,5 +38,5 @@ dependencies {
     compile 'com.android.support:design:22.2.1'
     compile 'org.parceler:parceler-api:1.0.1'
     apt 'org.parceler:parceler:1.0.1'
-    compile 'com.github.fabioCollini:twowaydatabinding:0.2'
+    compile 'com.github.fabioCollini:twowaydatabinding:0.3'
 }
